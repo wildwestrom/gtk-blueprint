@@ -1,0 +1,19 @@
+[package]
+name = "gtk-blueprint-macros"
+description = "Internal proc macro crate"
+version = "0.2.0"
+license = "GPL-3.0-or-later"
+keywords = ["gtk", "blueprint"]
+edition = "2021"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = "2"
+phf = { version = "0.11.3", default-features = false, optional = true }
+phf_codegen = "0.11.3"
+
+[features]
+default = ["compiled-map"]
+compiled-map = ["dep:phf"]
