@@ -14,7 +14,10 @@ edition = "2021"
 proc-macro = true
 
 [dependencies]
-syn = "1.0.100"
-# phf = { version = "0.11.1", default-features = false } # for compiled equivalent of hashmap
-phf_codegen = "0.11.1"
+syn = "2"
+phf = { version = "0.11.3", default-features = false, optional = true }
+phf_codegen = "0.11.3"
 
+[features]
+default = ["compiled-map"]
+compiled-map = ["dep:phf"]

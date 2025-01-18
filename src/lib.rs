@@ -43,6 +43,7 @@ pub fn include_blp(input: TokenStream) -> TokenStream {
 }
 
 
+#[cfg(feature = "compiled-map")]
 #[proc_macro]
 /// Generates a [Map](https://docs.rs/phf/0.11.1/phf/struct.Map.html) of all the
 /// blueprints in the project and their paths. ***Requires crate

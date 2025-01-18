@@ -1,6 +1,7 @@
 use std::process::Command;
 use std::io::ErrorKind;
 
+#[cfg(feature = "compiled-map")]
 // Look for any .blp files in the project (ignoring target and git dirs)
 // 
 // This function is recursive, and calls itself when it hits a directory. The `path`
